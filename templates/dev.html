@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}developer{% endblock %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <!-- <link rel="icon" href="static/images/logo.png" type="image/icon type"> -->
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+        
+        {% block style %}
+        <style>
+
+            #card{
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+            .fa {
+                padding: 8px;
+                font-size: 30px;
+                width: 50px;
+                text-align: center;
+                text-decoration: none;
+                margin: 5px 2px;
+            }
+        
+            .fa:hover {
+                opacity: 0.7;
+            }
+        
+            .fa-linkedin {
+                background: #007bb5;
+                color: white;
+            }
+            .fa-instagram {
+                background: #bd1748;
+                color: white;
+            }
+            .fa-facebook {
+                background: #3B5998;
+                color: white;
+            }
+        </style>
+        {% endblock %}
+</head>
+<body>
+
+
+	<nav class="navbar navbar-dark bg-dark">
+		<!-- Navbar content -->
+		<div class="container-fluid">
+			<a class="navbar-brand" >IMAGE CAPTION GENERATOR</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+			  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+				  <a class="nav-link active" aria-current="page" href="{{url_for('hello')}}">Home</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="{{url_for('developer')}}">Developer</a>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+	</nav>
+	{% block body %}
+    <center>
+        <div id = "card">
+            <div class="card" style="width: 18rem;">
+                <img src="static/images/Namit.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Namit</h5>
+                  <p class="card-text">Hi, I am Namit Goyal, currently pursuing B-Tech in Computer Science and Engineering from UIET Panjab University, Chandigarh.</p>
+                  <a class="github-button" href="https://github.com/NamitGoyal00" aria-label="Follow @ABX9801 on GitHub">Follow Namit Goyal</a>
+                </div>
+            </div>
+        </div>
+        <div id="social">
+            <a href="https://www.linkedin.com/in/namit-goyal-a042841bb" class="fa fa-linkedin"></a>
+        </div>
+    
+      <div id = "card">
+          <div class="card" style="width: 18rem;">
+              <img src="static/images/Gaurav.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Gaurav </h5>
+                <p class="card-text">Hi, I am Gaurav Choudhary, currently pursuing B-Tech in Computer Science and Engineering from UIET Panjab University, Chandigarh.</p>
+                
+
+                
+                <a class="github-button" href="https://github.com/fullmetal-heart" aria-label="Follow @ABX9801 on GitHub">Follow Gaurav Choudhary</a>
+              </div>
+          </div>
+      </div>
+      <div id="social">
+          <a href="https://www.linkedin.com/in/gaurav-choudhary-9b91b019a" class="fa fa-linkedin"></a>
+      </div>
+  </center>
+  
+	{% endblock %}
+	</div>
+
+</body>
+</html>
